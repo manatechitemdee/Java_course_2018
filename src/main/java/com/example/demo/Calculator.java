@@ -24,7 +24,7 @@ public class Calculator implements OnAddListener{
 
 private void start() {
   Main main = new Main();
-  main.add(this, 1,2);
+  main.add(this, 1, 2);  
 }
 
 public void onSuccess(int result) {

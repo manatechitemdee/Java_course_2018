@@ -14,7 +14,7 @@ public class BookTest {
     }
     @Test
     public void CreateBookWithConstructor() {
-        Book book1 = new Book("H1",8,2);
+        Book book1 = new Book("H1",8,2); 
         Book book2 = new Book("H1",8,2);
         assertEquals(book1,book2);
     }

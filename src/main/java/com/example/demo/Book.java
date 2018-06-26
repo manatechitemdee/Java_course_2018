@@ -47,5 +47,9 @@ public class Book {
     public static Book CreateHarryPotterTwo(int stock) {
         return new Book("H1",8,stock);
     }
+    public double getPrice() {
+        // TODO Auto-generated method stub
+        return this.price;
+    }
 
 }
