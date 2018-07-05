@@ -22,18 +22,25 @@ public class MainSorting {
         //employees.forEach(System.out::println);
         
         // Sorting comparator
-        Collections.sort(employees,new Comparator<Employee>() {
+       // Collections.sort(employees,new Comparator<Employee>() {
 
-            @Override
-            public int compare(Employee o1, Employee o2) {
-                // TODO Auto-generated method stub
-               // return o1.getName().compareTo(o2.getName());
-               //   return (o1.getSalary() - o2.getSalary() > 0)? -1 :0;
-                return (int)(o1.getSalary() - o2.getSalary());
-            }
+//            @Override
+//            public int compare(Employee o1, Employee o2) {
+//                // TODO Auto-generated method stub
+//               // return o1.getName().compareTo(o2.getName());
+//               //   return (o1.getSalary() - o2.getSalary() > 0)? -1 :0;
+//                return (int)(o1.getSalary() - o2.getSalary());
+//            }
             
-        });
-        employees.forEach(System.out::println);
+            Comparator<Employee> withLambda =
+                    (Employee o1 , Employee o2) -> 
+                        (int)(o2.getSalary() - o2.getSalary());
+                    Collections.sort(employees,  withLambda);
+                    employees.forEach(System.out::println);
+            }
+        
+        
+        //employees.forEach(System.out::println);
 
-    }
-}
+        }
+
